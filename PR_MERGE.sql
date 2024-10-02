@@ -17,6 +17,7 @@ lvc_tabla_update    VARCHAR2(128) := p_tabla_update; /* Es la tabla a Actualizar
 lvc_tabla_origen    VARCHAR2(128) := p_tabla_origen; /* Desde donde se va a actualizar */
 
 BEGIN
+    -----------------
     -- Obtener la PK
     -----------------
     SELECT LISTAGG('a.'||cols.column_name||' = b.'||cols.column_name, ' and '||chr(13)) WITHIN GROUP (ORDER BY cols.position) AS PK
@@ -28,6 +29,7 @@ BEGIN
       AND CONS.CONSTRAINT_TYPE = 'P'
     ORDER BY COLS.POSITION;
 
+    --------------------
     -- Generar el Update
     --------------------
     SELECT LISTAGG('a.'||cols.column_name ||' = b.' || cols.column_name, ', '||chr(13)) WITHIN GROUP (ORDER BY cols.column_id) AS lvc_update
@@ -42,6 +44,7 @@ BEGIN
      AND COLS.TABLE_NAME = lvc_tabla_update
      ORDER BY cols.column_id;
      
+     --------------------
      -- Generar el Insert
      --------------------
      SELECT LISTAGG(cols.column_name, ', '||chr(13)) WITHIN GROUP ( ORDER BY cols.column_id ) AS lvc_insert,
@@ -51,6 +54,7 @@ BEGIN
      WHERE table_name = lvc_tabla_update
     ORDER BY COLS.COLUMN_ID;
 
+    ----------------------------------------
     -- Genera la sentencia MERGE Completa
     ----------------------------------------
     lvc_sentencia := 'MERGE INTO ' || lvc_tabla_update || ' a' || CHR(13) ||
@@ -63,5 +67,10 @@ BEGIN
                       ' INSERT ' || '(' || lvc_insert || ')' ||
                       ' VALUES ' || '(' || lvc_values || ');';
                     
-    dbms_output.put_line(lvc_sentencia);    
+    --------------------------------------------------------------------------------------------
+    -- Genera el script de la sentencia, la cual puede ser ajustada para el proposito específico
+    --------------------------------------------------------------------------------------------
+    
+    dbms_output.put_line(lvc_sentencia);
+    
 END;
