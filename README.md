@@ -1,6 +1,6 @@
 Bloque anónimo que genera automáticamente una sentencia MERGE de Oracle para combinar o actualizar una tabla.
 
-__Uso:__
+__Cómo Usarla:__
 
   BEGIN
     pr_merge(p_tabla_update VARCHAR2, p_tabla_origen VARCHAR2);
