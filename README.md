@@ -2,9 +2,9 @@ Bloque anónimo que genera automáticamente una sentencia MERGE de Oracle para c
 
 __Cómo Usarla:__
 
-    BEGIN
-      pr_merge(p_tabla_update VARCHAR2, p_tabla_origen VARCHAR2);
-    END;
+BEGIN
+    pr_merge(p_tabla_update VARCHAR2, p_tabla_origen VARCHAR2);
+END;
 
 __Parametros:__
 
