@@ -18,3 +18,5 @@ __Mayor velocidad:__ Lee las tablas una sola vez para actualizar o insertar dato
 __Menos código:__ Hace el trabajo de un INSERT y un UPDATE al mismo tiempo en un solo bloque claro y fácil de leer.
 
 __Procesos seguros:__ Ayuda a mantener los datos limpios y sin duplicados en tareas grandes como procesos ETL o cargas masivas
+
+![image_alt](https://github.com/nestorhm/plsql_plublic/blob/32a90571fcc1d36dc93651ae00f0f14b5d59c841/PR_MERGE.png)
