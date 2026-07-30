@@ -19,4 +19,8 @@ __Menos código:__ Hace el trabajo de un INSERT y un UPDATE al mismo tiempo en u
 
 __Procesos seguros:__ Ayuda a mantener los datos limpios y sin duplicados en tareas grandes como procesos ETL o cargas masivas
 
+Al ejecutarlo en su BD producirá una salida como la siguiente:
+
 ![image_alt](https://github.com/nestorhm/plsql_plublic/blob/32a90571fcc1d36dc93651ae00f0f14b5d59c841/PR_MERGE.png)
+
+Luego puedes copiar ese código generado e integrarlos a los procesos de su aplicación.
