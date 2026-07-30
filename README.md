@@ -8,9 +8,9 @@ __Cómo Usarla:__
 
 __Parametros:__
 
-  p_tabla_update => Es la tabla que se va a actualizar.
+    p_tabla_update => Es la tabla que se va a actualizar.
   
-  p_tabla_origen >= Tabla origen de los datos, está puede ser reemplazada por un QUERY.
+    p_tabla_origen >= Tabla origen de los datos, está puede ser reemplazada por un QUERY.
 
 __Ventajas:__
 
