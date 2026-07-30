@@ -13,7 +13,7 @@ __Parametros:__
 
 __Ventajas:__
 
-__Mayor velocidad:__ Lee las tablas una sola vez para actualizar o insertar datos, lo que gasta menos recursos que usar comandos separados.
+__Mayor velocidad:__ Lee las tablas una sola vez para actualizar o insertar datos, lo que gasta menos recursos que usar comandos separados. Incluso puede también realizar la operación DELETE.
 
 __Menos código:__ Hace el trabajo de un INSERT y un UPDATE al mismo tiempo en un solo bloque claro y fácil de leer.
 
